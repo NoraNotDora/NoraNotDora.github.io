@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Issue Resolution: A Survey on LLM-based Software Engineering Issue Resolution</title>
+    <meta name="description" content="A Survey of SWE Task: Advances, Frontiers and Future of Issue Resolution">
+    <meta name="keywords" content="Issue Resolution, Software Engineering, Large Language Models, LLM, SWE-bench, AI Agents">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#abstract">Abstract</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#methods">Methods</a></li>
+            <li><a href="#data">Data</a></li>
+            <li><a href="#analysis">Analysis</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#readme">README Sync</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="page-title">
+                    <span class="title-main">✨ Awesome Issue Resolution</span>
+                    <span class="title-subtitle">A Survey of SWE Task: Advances, Frontiers and Future of Issue Resolution</span>
+                </h1>
+                <div class="badges">
+                    <a href="https://github.com/NoraNotDora/awesome-issue-resolution" class="badge github" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="#" class="badge paper">
+                        📄 Paper
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="doc-layout">
+        <aside class="doc-sidebar">
+            <div class="sidebar-section">
+                <p class="sidebar-label">On this page</p>
+                <ul>
+                    <li><a href="#abstract">Abstract</a></li>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#methods">Methods</a></li>
+                    <li><a href="#data">Data</a></li>
+                    <li><a href="#analysis">Analysis</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#readme">README Sync</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-card">
+                <p class="sidebar-label">Quick Access</p>
+                <a class="sidebar-link" href="https://github.com/NoraNotDora/awesome-issue-resolution" target="_blank" rel="noopener">
+                    <span>GitHub Repository</span>
+                    <span>↗</span>
+                </a>
+                <a class="sidebar-link" href="#methods">
+                    <span>Method Taxonomy</span>
+                    <span>→</span>
+                </a>
+                <a class="sidebar-link" href="#data">
+                    <span>Dataset Catalog</span>
+                    <span>→</span>
+                </a>
+            </div>
+            <div class="sidebar-card highlight-card">
+                <p class="sidebar-label">TL;DR</p>
+                <p class="sidebar-text">
+                    A living survey distilling data resources, agent methodologies, and analytical works that push LLM-based issue resolution forward.
+                </p>
+            </div>
+        </aside>
+        <div class="doc-content">
+        <section id="abstract" class="section">
+            <div class="section-inner">
+                <h2>📄 Abstract</h2>
+                <div class="abstract-content">
+                    <p>
+                        Issue Resolution, a complex Software Engineering (SWE) task integral to real-world development, has garnered substantial interest within artificial intelligence. Notably, the establishment of benchmarks like SWE-bench revealed this task as profoundly difficult for Large Language Models (LLMs), which has catalyzed a new research frontier focused on building sophisticated agents.
+                    </p>
+                    <p>
+                        In this paper, we systematically investigate this emerging domain, summarizing the rapidly growing ecosystem of data, methods and analysis through a meticulous taxonomy that offers novel perspectives. Moreover, we delve into the current frontiers and delineate the key challenges and future directions, thereby shedding light on future research. Furthermore, we engage in a discussion about open problems and critical analyses. We hope this paper serves as an introduction for researchers and fosters future research in this domain.
+                    </p>
+                    <div class="abstract-figure">
+                        <img src="./figures/Framework.jpg" alt="Overview of the Issue Resolution taxonomy">
+                        <p class="figure-caption">Figure: Overview of the Issue Resolution framework.</p>
+                    </div>
+                    <p class="highlight">
+                        <strong>Resources have been made publicly available at:</strong>
+                        <a href="https://github.com/NoraNotDora/awesome-issue-resolution" target="_blank">https://github.com/NoraNotDora/awesome-issue-resolution</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview" class="section">
+            <div class="section-inner">
+                <h2>🗺️ Overview</h2>
+                <p>
+                    This compilation systematically organizes and categorizes recent advancements in the field of LLM-based <strong>Issue Resolution</strong> within Software Engineering Tasks (<strong>SWE Tasks</strong>). The works are structured into three main research areas: <strong>Data</strong>, <strong>Methods</strong>, and <strong>Analysis</strong>, based on the corresponding papers featured in the taxonomy. Through this comprehensive survey, we aim to provide researchers with a clear understanding of the current state-of-the-art, emerging trends, and future research directions in this rapidly evolving domain.
+                </p>
+                <div class="taxonomy-diagram">
+                    <div class="taxonomy-item">
+                        <h3>🛠️ Methods</h3>
+                        <p>Covers training-free methods and training-based methods, including single-agent and multi-agent frameworks, as well as various enhancement modules</p>
+                    </div>
+                    <div class="taxonomy-item">
+                        <h3>📂 Data</h3>
+                        <p>Includes evaluation datasets, training datasets, and data construction methodologies</p>
+                    </div>
+                    <div class="taxonomy-item">
+                        <h3>🔍 Analysis</h3>
+                        <p>Provides in-depth analysis and discussion of data, methods, and related phenomena</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="methods" class="section">
+            <div class="section-inner">
+                <h2>🛠️ Methods</h2>
+                <p>This section highlights the different techniques and frameworks proposed for resolving SWE tasks, categorized into <strong>Training-free Methods</strong> and <strong>Training-based Methods</strong>.</p>
+
+                <div class="method-category">
+                    <h3>🧑‍💻 Training-free Methods</h3>
+                    <p>These approaches generally focus on designing effective <strong>Agent Frameworks</strong> or <strong>Modules</strong> (such as tools and memory) to maximize the LLM's reasoning capability without extensive model fine-tuning.</p>
+
+                    <h4>Frameworks</h4>
+                    <p>Frameworks typically define the overall structure for how agents interact with the environment and execute tasks.</p>
+
+                    <div class="method-list">
+                        <div class="method-group">
+                            <h5>Single-Agent</h5>
+                            <ul>
+                                <li>
+                                    <div class="paper-entry">
+                                        <div>
+                                            <strong><a class="paper-link" href="#" target="_blank">SWE-Agent</a>:</strong>
+                                            Agent computer interfaces enable reliable evaluation of large language models on repository-level code changes.
+                                        </div>
+                                        <div class="paper-links">
+                                            <a class="link-chip link-arxiv" href="#" target="_blank" aria-label="SWE-Agent on arXiv">
+                                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h5.25l3.1 5.24L14.5 5.5H21l-5.12 8.09L21.5 20H16l-3.72-5.8L8.5 20H3l5.62-8.1z"/></svg>
+                                                <span>arXiv</span>
+                                            </a>
+                                            <a class="link-chip link-github" href="#" target="_blank" aria-label="SWE-Agent on GitHub">
+                                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.24c-3.34.72-4.03-1.42-4.03-1.42-.55-1.38-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.53-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.4 11.4 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.66.25 2.88.12 3.18.77.84 1.24 1.9 1.24 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.82 1.1.82 2.23v3.29c0 .32.2.7.83.58A12 12 0 0012 .5z"/></svg>
+                                                <span>GitHub</span>
+                                            </a>
+                                            <a class="link-chip link-hf" href="#" target="_blank" aria-label="SWE-Agent on Hugging Face">
+                                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.7 2.8C5.4 2.8 3 4.7 3 7.7c0 2 .9 3.5 2.4 4.6-.2.7-.4 1.7-.1 2.7.5 1.7 1.9 3 4.3 4 2.3 1 4 1.4 5.5 1 1.6-.4 2.7-1.4 3.6-2.8.8-1.4 1.1-3 1.1-4.4 0-.5 0-1-.1-1.5 1-.8 1.4-2 1.4-3.3 0-2.7-2.1-4.9-4.8-4.9-1.6 0-3 .8-3.9 2-1-.6-2.1-.9-3.3-.9zM9 11.5c.7 0 1.2.6 1.2 1.3s-.5 1.3-1.2 1.3-1.2-.6-1.2-1.3.5-1.3 1.2-1.3zm6 0c.7 0 1.2.6 1.2 1.3s-.5 1.3-1.2 1.3-1.2-.6-1.2-1.3.5-1.3 1.2-1.3zm-5.5 3.6c1.2 1.5 3 2.3 5 2.3 1.9 0 3.7-.8 4.9-2.3-.3 2.2-1.6 4.4-4.8 5.2-3.3.8-8.2-1.7-9-3.8-.4-.9-.3-1.8-.1-2.5.9.7 2 .9 3.4 1.1 1.3.2 2.8.3 4.4.7-1.8-.4-3.1-.8-4.5-1.4z"/></svg>
+                                                <span>HuggingFace</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">PatchPilot</a>:</strong> A cost-efficient software engineering agent.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">LCLM</a>:</strong> Putting context in context: Simplifying agents with limited context.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">DGM</a>:</strong> Darwin Godel machine: An open-ended developmental machine for software engineering.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SE-Agent</a>:</strong> SE-agent: Self-evolution trajectory optimization for large language model powered software engineering agents.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">Live-SWE-agent</a>:</strong> Live-SWE-agent: The evolution of self-evolving agents for software engineering.</li>
+                            </ul>
+                        </div>
+
+                        <div class="method-group">
+                            <h5>Multi-Agent</h5>
+                            <ul>
+                                <li><strong><a class="paper-link" href="#" target="_blank">MAGIS</a>:</strong> An LLM-based multi-agent framework for automatic issue resolution.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">AutoCodeRover</a>:</strong> Autonomous program improvement.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">CodeR</a>:</strong> Issue resolving multi-agent framework for automated software engineering.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">OpenHands</a>:</strong> Open hands: An open platform for AI-native software engineering.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">OrcaLoca</a>:</strong> OrcaLoca: An LLM-agent framework for accurate issue localization and bug fixing in large codebases.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">DEI</a>:</strong> Diversity empowers intelligence: Integrating LLM agent for automated software engineering.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">MarsCode Agent</a>:</strong> An AI-native automated software engineering agent.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SWE-Search</a>:</strong> SWE-search: Enhancing software agents with web search capabilities.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">CodeCoR</a>:</strong> CodeCoR: LLM-based self-reflective multi-agent framework for software issue resolution.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">Agent KB</a>:</strong> Leveraging cross-domain knowledge graphs for software issue resolution.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SWE-Debate</a>:</strong> A competitive multi-agent debate framework for software engineering tasks.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SWE-Exp</a>:</strong> An experience-driven software issue resolution agent.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">Trae Agent</a>:</strong> An LLM-based agent for real-world software issue resolution.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">Meta-RAG</a>:</strong> Meta-RAG for large codebases using structural code retrieval.</li>
+                            </ul>
+                        </div>
+
+                        <div class="method-group">
+                            <h5>Workflow</h5>
+                            <ul>
+                                <li><strong><a class="paper-link" href="#" target="_blank">Agentless</a>:</strong> Agentless: Demystifying LLM-based software engineering.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SynFix</a>:</strong> Improving verifiable bug fixing by syntax-guided patch generation.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">CodeV</a>:</strong> CodeV: Towards multimodal understanding and reasoning for software engineering.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">Seeing is Fixing</a>:</strong> Seeing is fixing: Cross-modal reasoning for bug resolution in software engineering.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4>Modules</h4>
+                    <p>Core components used to enhance the capabilities of agents within a framework.</p>
+
+                    <div class="method-list">
+                        <div class="method-group">
+                            <h5>Tool</h5>
+                            <ul>
+                                <li><strong><a class="paper-link" href="#" target="_blank">Alibaba LingmaAgent</a>:</strong> Improving automated software engineering with an agent-based framework.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SpecRover</a>:</strong> Code intent extraction and transformation for bug fixing.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">RepoGraph</a>:</strong> RepoGraph: Enhancing AI software engineers with repository-level knowledge graphs.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">CoSIL</a>:</strong> Issue localization in LLM-driven iterative bug fixing.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SWERank</a>:</strong> Software issue localization using large language models.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">TestPrune</a>:</strong> Old meets new: Evaluating the effectiveness of test pruning for large language models.</li>
+                            </ul>
+                        </div>
+
+                        <div class="method-group">
+                            <h5>Memory</h5>
+                            <ul>
+                                <li><strong><a class="paper-link" href="#" target="_blank">Infant Agent</a>:</strong> Infant agent: Tool-integrated logic-driven planning for complex software tasks.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">EvoCoder</a>:</strong> LLMs as continuous learners: Improving code generation through self-feedback and experience replay.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">ExpeRepair</a>:</strong> ExpeRepair: Dual-memory enhanced LLM-based software repair.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">Commit history-based memory</a>:</strong> Improving code localization for repository-level bug fixing using commit history-based memory.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">ReasoningBank</a>:</strong> ReasoningBank: Scaling agent self-evolving in the wild.</li>
+                            </ul>
+                        </div>
+
+                        <div class="method-group">
+                            <h5>Inference-time Scaling</h5>
+                            <ul>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SWE-Search</a>:</strong> SWE-search: Enhancing software agents with web search capabilities.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">CodeMonkeys</a>:</strong> CodeMonkeys: Scaling test-time compute to 2x for a 13% improvement on SWE-Bench.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SWE-PRM</a>:</strong> Agents astray: Course correcting SWE agents with process reward models.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="method-category">
+                    <h3>🧠 Training-based Methods</h3>
+                    <p>Focuses on adapting LLMs to SWE tasks through model training and fine-tuning on specific datasets.</p>
+
+                    <div class="method-list">
+                        <div class="method-group">
+                            <h5>SFT-based Methods (Supervised Fine-Tuning)</h5>
+                            <ul>
+                                <li><strong><a class="paper-link" href="#" target="_blank">Lingma SWE-GPT</a>:</strong> An open development process-centric LLM for software engineering.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">CodeXEmbed</a>:</strong> CodeXEmbed: Code retrieval via representation learning.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SWE-Gym</a>:</strong> Training software engineering agents with large language models.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SoRFT</a>:</strong> SoRFT: Issue resolving sub-task oriented finetuning for LLMs.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SWE-Dev</a>:</strong> SWE-Dev: Building software engineering LLMs.</li>
+                            </ul>
+                        </div>
+
+                        <div class="method-group">
+                            <h5>RL-based Methods (Reinforcement Learning)</h5>
+                            <ul>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SWE-RL</a>:</strong> Advancing LLM reasoning in software engineering with reinforcement learning.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">SEAlign</a>:</strong> SEAlign: Alignment training for software engineering agents.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">Satori-SWE</a>:</strong> Evolutionary test-time scaling for software engineering agents.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">DeepSWE</a>:</strong> DeepSWE: Deep learning for software engineering.</li>
+                                <li><strong><a class="paper-link" href="#" target="_blank">DAPO</a>:</strong> Training long-context multi-turn software engineering agents via domain-aligned policy optimization.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="data" class="section">
+            <div class="section-inner">
+                <h2>📂 Data</h2>
+                <p>This section lists crucial datasets and data construction methodologies used for evaluating and training Issue Resolution models.</p>
+
+                <div class="data-category">
+                    <h3>📊 Datasets</h3>
+
+                    <div class="method-group">
+                        <h4>Evaluation Datasets</h4>
+                        <ul>
+                            <li><strong><a class="paper-link" href="#" target="_blank">SWE-bench</a>:</strong> Language models are good at resolving code changes.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">SWE-bench Lite</a>:</strong> A light version of SWE-bench.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">SWE-bench-java</a>:</strong> A GitHub issue resolving benchmark for Java.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">Visual SWE-bench</a>:</strong> Towards multimodal understanding and reasoning for software engineering.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">SWE-Lancer</a>:</strong> Frontier LLMs earn money on GitHub.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">CodeRAG-bench</a>:</strong> A benchmark for evaluating code retrieval-augmented generation.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">Multi-SWE-bench</a>:</strong> A multilingual benchmark for issue resolution.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">SWE-PolyBench</a>:</strong> A multi-language benchmark for repository-level software.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">SWE-bench Multilingual</a>:</strong> Scaling data for software engineering agents.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">SWE-fficiency</a>:</strong> Optimizing language models for software repair efficiency.</li>
+                        </ul>
+                    </div>
+
+                    <div class="method-group">
+                        <h4>Training Datasets</h4>
+                        <div data-readme-section="training-datasets">
+                            <p class="section-placeholder">Content auto-synced from README.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-category">
+                    <h3>🏗️ Data Construction</h3>
+                    <p>Covers the tools and methods used to build and expand the datasets.</p>
+
+                    <div class="method-group">
+                        <h4>Data Collection</h4>
+                        <ul>
+                            <li><strong><a class="paper-link" href="#" target="_blank">SWE-rebench</a>:</strong> An automated pipeline for software engineering task replication.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">SWE-bench Goes Live!</a>:</strong> Continuously collecting and evaluating real-world bugs.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">RepoForge</a>:</strong> Training SOTA fast-thinking LLM agents for complex software tasks.</li>
+                        </ul>
+                    </div>
+
+                    <div class="method-group">
+                        <h4>Data Synthesis</h4>
+                        <ul>
+                            <li><strong><a class="paper-link" href="#" target="_blank">Learn-by-interact</a>:</strong> Learning by interacting with the code execution environment.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">R2E-Gym</a>:</strong> A procedural environment for hybrid reinforcement learning in software engineering.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">SWE-Flow</a>:</strong> Synthesizing software engineering tasks for training agents.</li>
+                            <li><strong><a class="paper-link" href="#" target="_blank">SWE-Mirror</a>:</strong> Scaling issue-resolving datasets with agent collaboration.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="analysis" class="section">
+            <div class="section-inner">
+                <h2>🔍 Analysis</h2>
+                <p>This section includes research works that provide in-depth analysis and discussion of data, methods, and related phenomena in issue resolution.</p>
+
+                <div class="method-list">
+                    <div class="method-group">
+                        <h4>Data Analysis</h4>
+                        <div data-readme-section="data-analysis">
+                            <p class="section-placeholder">Content auto-synced from README.</p>
+                        </div>
+                    </div>
+
+                    <div class="method-group">
+                        <h4>Methods Analysis</h4>
+                        <div data-readme-section="methods-analysis">
+                            <p class="section-placeholder">Content auto-synced from README.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="section">
+            <div class="section-inner">
+                <h2>📚 Resources</h2>
+                <div class="resources-content">
+                    <p>All resources for this project have been made publicly available, including:</p>
+                    <ul>
+                        <li>📖 Complete paper list and categorization</li>
+                        <li>🔗 Links to related papers, code, and datasets</li>
+                        <li>📊 Detailed taxonomy and analysis</li>
+                        <li>🔄 Continuously updated repository</li>
+                    </ul>
+                    <div class="resource-links">
+                        <a href="https://github.com/NoraNotDora/awesome-issue-resolution" class="btn btn-primary" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            Visit GitHub Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="readme" class="section">
+            <div class="section-inner">
+                <h2>📘 README Sync</h2>
+                <p class="section-description">
+                    The content below is rendered live from the repository <code>README.md</code>. Update the README to instantly reflect edits on this webpage when deployed on GitHub Pages.
+                </p>
+                <div id="readme-content" class="markdown-body">
+                    <p>Loading README...</p>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Awesome Issue Resolution. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="https://github.com/NoraNotDora/awesome-issue-resolution" target="_blank">GitHub</a> |
+                <a href="https://github.com/NoraNotDora/awesome-issue-resolution/issues" target="_blank">Issues</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight active section in navbar
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Sync README content
+        function extractReadmeBlock(text, key) {
+            const normalized = key.replace(/-/g, '_').toUpperCase();
+            const start = `<!-- ${normalized}_START -->`;
+            const end = `<!-- ${normalized}_END -->`;
+            const startIndex = text.indexOf(start);
+            const endIndex = text.indexOf(end);
+            if (startIndex === -1 || endIndex === -1 || endIndex <= startIndex) return null;
+            return text.slice(startIndex + start.length, endIndex).trim();
+        }
+
+        const LINK_ICON_MAP = {
+            arxiv: {
+                className: 'link-arxiv',
+                label: 'arXiv',
+                icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h5.25l3.1 5.24L14.5 5.5H21l-5.12 8.09L21.5 20H16l-3.72-5.8L8.5 20H3l5.62-8.1z"/></svg>'
+            },
+            github: {
+                className: 'link-github',
+                label: 'GitHub',
+                icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.24c-3.34.72-4.03-1.42-4.03-1.42-.55-1.38-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.53-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.4 11.4 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.66.25 2.88.12 3.18.77.84 1.24 1.9 1.24 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.82 1.1.82 2.23v3.29c0 .32.2.7.83.58A12 12 0 0012 .5z"/></svg>'
+            },
+            'huggingface': {
+                className: 'link-hf',
+                label: 'HuggingFace',
+                icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.7 2.8C5.4 2.8 3 4.7 3 7.7c0 2 .9 3.5 2.4 4.6-.2.7-.4 1.7-.1 2.7.5 1.7 1.9 3 4.3 4 2.3 1 4 1.4 5.5 1 1.6-.4 2.7-1.4 3.6-2.8.8-1.4 1.1-3 1.1-4.4 0-.5 0-1-.1-1.5 1-.8 1.4-2 1.4-3.3 0-2.7-2.1-4.9-4.8-4.9-1.6 0-3 .8-3.9 2-1-.6-2.1-.9-3.3-.9zM9 11.5c.7 0 1.2.6 1.2 1.3s-.5 1.3-1.2 1.3-1.2-.6-1.2-1.3.5-1.3 1.2-1.3zm6 0c.7 0 1.2.6 1.2 1.3s-.5 1.3-1.2 1.3-1.2-.6-1.2-1.3.5-1.3 1.2-1.3zm-5.5 3.6c1.2 1.5 3 2.3 5 2.3 1.9 0 3.7-.8 4.9-2.3-.3 2.2-1.6 4.4-4.8 5.2-3.3.8-8.2-1.7-9-3.8-.4-.9-.3-1.8-.1-2.5.9.7 2 .9 3.4 1.1 1.3.2 2.8.3 4.4.7-1.8-.4-3.1-.8-4.5-1.4z"/></svg>'
+            }
+        };
+
+        function enhanceSyncedLinks(container) {
+            container.querySelectorAll('a').forEach((anchor) => {
+                const label = anchor.textContent.trim().toLowerCase();
+                const iconInfo = LINK_ICON_MAP[label];
+                if (iconInfo) {
+                    anchor.classList.add('link-chip', iconInfo.className);
+                    anchor.innerHTML = `${iconInfo.icon}<span>${iconInfo.label}</span>`;
+                } else {
+                    anchor.classList.add('inline-link');
+                }
+            });
+        }
+
+        function populateReadmeSections(rawText) {
+            document.querySelectorAll('[data-readme-section]').forEach((el) => {
+                const key = el.getAttribute('data-readme-section');
+                const blockText = extractReadmeBlock(rawText, key);
+                if (blockText) {
+                    el.innerHTML = marked.parse(blockText, { breaks: true });
+                    el.classList.add('synced-block');
+                    enhanceSyncedLinks(el);
+                } else {
+                    el.innerHTML = `<p class="error-text">Section "${key}" not found in README.</p>`;
+                    el.classList.remove('synced-block');
+                }
+            });
+        }
+
+        async function loadReadme() {
+            const container = document.getElementById('readme-content');
+            const showFallback = (message) => {
+                container.innerHTML = `<p class="error-text">${message}</p>`;
+                document.querySelectorAll('[data-readme-section]').forEach((el) => {
+                    el.innerHTML = `<p class="error-text">${message}</p>`;
+                });
+            };
+
+            if (window.location.protocol === 'file:') {
+                showFallback('README sync requires serving the site over HTTP/HTTPS. Please run a local dev server (e.g., "python -m http.server") or view via GitHub Pages.');
+                return;
+            }
+
+            try {
+                const response = await fetch('README.md');
+                if (!response.ok) throw new Error('Failed to fetch README');
+                const text = await response.text();
+                const html = marked.parse(text, { breaks: true });
+                container.innerHTML = html;
+                populateReadmeSections(text);
+            } catch (error) {
+                showFallback(`Unable to load README automatically. ${error.message}`);
+            }
+        }
+        loadReadme();
+    </script>
+</body>
+</html>
+

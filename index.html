@@ -1,0 +1,1151 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Survey and taxonomy of LLM-based Software Engineering Issue Resolution">
+      
+      
+      
+      
+      
+        <link rel="next" href="about/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Awesome Issue Resolution</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="static/stylesheets/fonts.css">
+    
+      <link rel="stylesheet" href="static/stylesheets/typography.css">
+    
+      <link rel="stylesheet" href="static/stylesheets/air-hero.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#awesome-issue-resolution" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="." title="Awesome Issue Resolution" class="md-header__button md-logo" aria-label="Awesome Issue Resolution" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Awesome Issue Resolution
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="amber"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/NoraNotDora/awesome-issue-resolution" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="cite/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Cite
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Awesome Issue Resolution" class="md-nav__button md-logo" aria-label="Awesome Issue Resolution" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Awesome Issue Resolution
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/NoraNotDora/awesome-issue-resolution" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 Abstract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗺️ Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#training-free-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍💻 Training-free Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧑‍💻 Training-free Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frameworks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frameworks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frameworks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-based-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Training-based Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📂 Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Datasets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Training Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-free-methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍💻 Training-free Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧑‍💻 Training-free Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single-Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-based-methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Training-based Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Training-based Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sft-based-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SFT-based Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rl-based-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RL-based Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluation-datasets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Evaluation Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Data Construction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗️ Data Construction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Collection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Synthesis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-construction_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Data Construction
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<div class="air-hero">
+  <div class="air-hero-inner">
+    <h1 class="air-title">✨ Awesome Issue Resolution</h1>
+    <p class="air-subtitle">A Survey of SWE Task: Advances, Frontiers and Future of Issue Resolution</p>
+    <div class="hero-badges">
+      <a class="hero-chip" href="https://github.com/NoraNotDora/awesome-issue-resolution" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338 .726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745 .083-.729 .083-.729 1.205 .084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492 .997 .107-.775 .418-1.305 .762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311 .469-2.381 1.236-3.221-.124-.303-.535-1.524 .117-3.176 0 0 1.008-.322 3.301 1.23 .957-.266 1.983-.399 3.003-.404 1.02 .005 2.047 .138 3.006 .404 2.291-1.552 3.297-1.23 3.297-1.23 .653 1.653 .242 2.874 .118 3.176 .77 .84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921 .43 .372 .823 1.102 .823 2.222v 3.293c0 .319 .192 .694 .801 .576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a class="hero-chip" href="cite/" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="12" height="20" rx="2" ry="2"/><path d="M8 7h6M8 11h6M8 15h6"/><path d="M16 2l4 4h-4z" fill="currentColor"/></svg>
+        Paper
+      </a>
+    </div>
+    <div class="hero-media">
+      <img class="hero-image" src="figures/awesome-issue-resolution.png" alt="Awesome Issue Resolution"/>
+    </div>
+  </div>
+</div>
+
+<h1 id="awesome-issue-resolution">🤖 Awesome Issue Resolution<a class="headerlink" href="#awesome-issue-resolution" title="Permanent link">&para;</a></h1>
+<p>A curated list of papers, frameworks, and datasets concerning the use of Large Language Models (LLMs) in tackling Software Engineering Tasks, specifically focusing on <strong>Issue Resolution</strong>.</p>
+<hr />
+<h2 id="abstract">📄 Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
+<p>Issue Resolution, a complex Software Engineering (SWE) task integral to real-world development, has garnered substantial interest within artificial intelligence. Notably, the establishment of benchmarks like SWE-bench revealed this task as profoundly difficult for Large Language Models (LLMs), which has catalyzed a new research frontier focused on building sophisticated agents. In this paper, we systematically investigate this emerging domain, summarizing the rapidly growing ecosystem of data, methods and analysis through a meticulous taxonomy that offers novel perspectives. Moreover, we delve into the current frontiers and delineate the key challenges and future directions, thereby shedding light on future research. Furthermore, we engage in a discussion about open problems and critical analyses. We hope this paper serves as an introduction for researchers and fosters future research in this domain.</p>
+<hr />
+<h2 id="overview">🗺️ Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>This compilation systematically organizes and categorizes recent advancements in the field of LLM-based <strong>Issue Resolution</strong> within Software Engineering Tasks (<strong>SWE Tasks</strong>). The works are structured into three main research areas: <strong>Data</strong>, <strong>Methods</strong>, and <strong>Analysis</strong>, based on the corresponding papers featured in the taxonomy. Through this comprehensive survey, we aim to provide researchers with a clear understanding of the current state-of-the-art, emerging trends, and future research directions in this rapidly evolving domain.</p>
+<p><img alt="Overview Framework" src="figures/Framework.jpg" /></p>
+<hr />
+<h2 id="methods">🛠️ Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<p>This section highlights the different techniques and frameworks proposed for resolving SWE tasks, categorized into <strong>Training-free Methods</strong> and <strong>Training-based Methods</strong>.</p>
+<h3 id="training-free-methods">🧑‍💻 Training-free Methods<a class="headerlink" href="#training-free-methods" title="Permanent link">&para;</a></h3>
+<p>These approaches generally focus on designing effective <strong>Agent Frameworks</strong> or <strong>Modules</strong> (such as tools and memory) to maximize the LLM's reasoning capability without extensive model fine-tuning.</p>
+<h4 id="frameworks">Frameworks<a class="headerlink" href="#frameworks" title="Permanent link">&para;</a></h4>
+<p>Frameworks typically define the overall structure for how agents interact with the environment and execute tasks.</p>
+<ul>
+<li><strong>Single-Agent</strong></li>
+<li>SWE-Agent: Agent computer interfaces enable reliable evaluation of large language models on repository-level code changes.</li>
+<li>PatchPilot: A cost-efficient software engineering agent.</li>
+<li>LCLM: Putting context in context: Simplifying agents with limited context.</li>
+<li>DGM: Darwin Godel machine: An open-ended developmental machine for software engineering.</li>
+<li>SE-Agent: SE-agent: Self-evolution trajectory optimization for large language model powered software engineering agents.</li>
+<li>Live-SWE-agent: Live-SWE-agent: The evolution of self-evolving agents for software engineering.</li>
+</ul>
+<h4 id="frameworks_1">Frameworks<a class="headerlink" href="#frameworks_1" title="Permanent link">&para;</a></h4>
+<p>Frameworks typically define the overall structure for how agents interact with the environment and execute tasks.</p>
+<ul>
+<li><strong>Single-Agent</strong></li>
+<li>SWE-Agent: Agent computer interfaces enable reliable evaluation of large language models on repository-level code changes.</li>
+<li>PatchPilot: A cost-efficient software engineering agent.</li>
+<li>LCLM: Putting context in context: Simplifying agents with limited context.</li>
+<li>DGM: Darwin Godel machine: An open-ended developmental machine for software engineering.</li>
+<li>SE-Agent: SE-agent: Self-evolution trajectory optimization for large language model powered software engineering agents.</li>
+<li>
+<p>Live-SWE-agent: Live-SWE-agent: The evolution of self-evolving agents for software engineering.</p>
+</li>
+<li>
+<p><strong>Multi-Agent</strong></p>
+</li>
+<li>MAGIS: An LLM-based multi-agent framework for automatic issue resolution.</li>
+<li>AutoCodeRover: Autonomous program improvement.</li>
+<li>CodeR: Issue resolving multi-agent framework for automated software engineering.</li>
+<li>OpenHands: Open hands: An open platform for AI-native software engineering.</li>
+<li>OrcaLoca: OrcaLoca: An LLM-agent framework for accurate issue localization and bug fixing in large codebases.</li>
+<li>DEI: Diversity empowers intelligence: Integrating LLM agent for automated software engineering.</li>
+<li>MarsCode Agent: An AI-native automated software engineering agent.</li>
+<li>SWE-Search: SWE-search: Enhancing software agents with web search capabilities.</li>
+<li>CodeCoR: CodeCoR: LLM-based self-reflective multi-agent framework for software issue resolution.</li>
+<li>Agent KB: Leveraging cross-domain knowledge graphs for software issue resolution.</li>
+<li>SWE-Debate: SWE-Debate: A competitive multi-agent debate framework for software engineering tasks.</li>
+<li>SWE-Exp: SWE-Exp: An experience-driven software issue resolution agent.</li>
+<li>Trae Agent: An LLM-based agent for real-world software issue resolution.</li>
+<li>
+<p>Meta-RAG: Meta-RAG for large codebases using structural code retrieval.</p>
+</li>
+<li>
+<p><strong>Workflow</strong></p>
+</li>
+<li>Agentless: Agentless: Demystifying LLM-based software engineering.</li>
+<li>SynFix: Improving verifiable bug fixing by syntax-guided patch generation.</li>
+<li>CodeV: CodeV: Towards multimodal understanding and reasoning for software engineering.</li>
+<li>Seeing is Fixing: Seeing is fixing: Cross-modal reasoning for bug resolution in software engineering.</li>
+</ul>
+<h4 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">&para;</a></h4>
+<p>Core components used to enhance the capabilities of agents within a framework.</p>
+<ul>
+<li><strong>Tool</strong></li>
+<li>(Includes various frameworks and standalone tools, see original mind map for full list of papers)</li>
+<li>Alibaba LingmaAgent: Improving automated software engineering with an agent-based framework.</li>
+<li>SpecRover: Code intent extraction and transformation for bug fixing.</li>
+<li>RepoGraph: RepoGraph: Enhancing AI software engineers with repository-level knowledge graphs.</li>
+<li>CoSIL: Issue localization in LLM-driven iterative bug fixing.</li>
+<li>SWERank: Software issue localization using large language models.</li>
+<li>
+<p>TestPrune: Old meets new: Evaluating the effectiveness of test pruning for large language models.</p>
+</li>
+<li>
+<p><strong>Memory</strong></p>
+</li>
+<li>Infant Agent: Infant agent: Tool-integrated logic-driven planning for complex software tasks.</li>
+<li>EvoCoder: LLMs as continuous learners: Improving code generation through self-feedback and experience replay.</li>
+<li>ExpeRepair: ExpeRepair: Dual-memory enhanced LLM-based software repair.</li>
+<li>commit history-based memory: Improving code localization for repository-level bug fixing using commit history-based memory.</li>
+<li>
+<p>ReasoningBank: ReasoningBank: Scaling agent self-evolving in the wild.</p>
+</li>
+<li>
+<p><strong>Inference-time Scaling</strong></p>
+</li>
+<li>SWE-Search: SWE-search: Enhancing software agents with web search capabilities.</li>
+<li>CodeMonkeys: CodeMonkeys: Scaling test-time compute to 2x for a 13% improvement on SWE-Bench.</li>
+<li>SWE-PRM: Agents astray: Course correcting SWE agents with process reward models.</li>
+</ul>
+<h3 id="training-based-methods">🧠 Training-based Methods<a class="headerlink" href="#training-based-methods" title="Permanent link">&para;</a></h3>
+<p>Focuses on adapting LLMs to SWE tasks through model training and fine-tuning on specific datasets.</p>
+<ul>
+<li><strong>SFT-based Methods (Supervised Fine-Tuning)</strong></li>
+</ul>
+<!-- SFT_METHODS_START -->
+<ul>
+<li>Lingma SWE-GPT: An open development process-centric LLM for software engineering. <a href="https://arxiv.org/abs/2403.01247">arXiv</a></li>
+<li>CodeXEmbed: CodeXEmbed: Code retrieval via representation learning. <a href="https://arxiv.org/abs/2402.01010">arXiv</a></li>
+<li>SWE-Gym: Training software engineering agents with large language models. <a href="https://arxiv.org/abs/2401.01001">arXiv</a></li>
+<li>SoRFT: SoRFT: Issue resolving sub-task oriented finetuning for LLMs. <a href="https://arxiv.org/abs/2405.02020">arXiv</a></li>
+<li>SWE-Dev: SWE-Dev: Building software engineering LLMs. <a href="https://arxiv.org/abs/2405.05050">arXiv</a></li>
+</ul>
+<!-- SFT_METHODS_END -->
+
+<ul>
+<li><strong>RL-based Methods (Reinforcement Learning)</strong></li>
+</ul>
+<!-- RL_METHODS_START -->
+<ul>
+<li>SWE-RL: Advancing LLM reasoning in software engineering with reinforcement learning. <a href="https://arxiv.org/abs/2402.06060">arXiv</a></li>
+<li>SEAlign: SEAlign: Alignment training for software engineering agents. <a href="https://arxiv.org/abs/2402.07070">arXiv</a></li>
+<li>Satori-SWE: Evolutionary test-time scaling for software engineering agents. <a href="https://arxiv.org/abs/2402.08080">arXiv</a></li>
+<li>DeepSWE: DeepSWE: Deep learning for software engineering. <a href="https://arxiv.org/abs/2402.09090">arXiv</a></li>
+<li>DAPO: Training long-context multi-turn software engineering agents via domain-aligned policy optimization. <a href="https://arxiv.org/abs/2402.10010">arXiv</a></li>
+</ul>
+<!-- RL_METHODS_END -->
+
+<hr />
+<h2 id="data">📂 Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h2>
+<p>This section lists crucial datasets and data construction methodologies used for evaluating and training Issue Resolution models.</p>
+<h3 id="datasets">📊 Datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h3>
+<h4 id="evaluation-datasets">Evaluation Datasets<a class="headerlink" href="#evaluation-datasets" title="Permanent link">&para;</a></h4>
+<!-- EVAL_DATASETS_START -->
+<ul>
+<li>SWE-bench: Language models are good at resolving code changes. <a href="https://arxiv.org/abs/2306.14031">arXiv</a></li>
+<li>SWE-bench Lite: A light version of SWE-bench. <a href="https://arxiv.org/abs/2307.01000">arXiv</a></li>
+<li>SWE-bench-java: A GitHub issue resolving benchmark for Java. <a href="https://arxiv.org/abs/2307.02000">arXiv</a></li>
+<li>Visual SWE-bench: Towards multimodal understanding and reasoning for software engineering. <a href="https://arxiv.org/abs/2307.03000">arXiv</a></li>
+<li>SWE-Lancer: Frontier LLMs earn money on GitHub. <a href="https://arxiv.org/abs/2307.04000">arXiv</a></li>
+<li>CodeRAG-bench: A benchmark for evaluating code retrieval-augmented generation. <a href="https://arxiv.org/abs/2307.05000">arXiv</a></li>
+<li>Multi-SWE-bench: A multilingual benchmark for issue resolution. <a href="https://arxiv.org/abs/2307.06000">arXiv</a></li>
+<li>SWE-PolyBench: A multi-language benchmark for repository-level software. <a href="https://arxiv.org/abs/2307.07000">arXiv</a></li>
+<li>SWE-bench Multilingual: Scaling data for software engineering agents. <a href="https://arxiv.org/abs/2307.08000">arXiv</a></li>
+<li>SWE-fficiency: Optimizing language models for software repair efficiency. <a href="https://arxiv.org/abs/2307.09000">arXiv</a></li>
+</ul>
+<!-- EVAL_DATASETS_END -->
+
+<h4 id="training-datasets">Training Datasets<a class="headerlink" href="#training-datasets" title="Permanent link">&para;</a></h4>
+<!-- TRAINING_DATASETS_START -->
+<ul>
+<li>SWE-bench-train: Training split of the SWE-bench dataset. <a href="https://arxiv.org/abs/2311.12983">arXiv</a> <a href="https://github.com/princeton-nlp/SWE-bench">GitHub</a> <a href="https://huggingface.co/datasets/princeton-nlp/SWE-bench">HuggingFace</a></li>
+<li>SWE-bench-extra: Extra training data for SWE-bench. <a href="https://arxiv.org/abs/2403.00107">arXiv</a> <a href="https://github.com/openai/swe-bench">GitHub</a></li>
+<li>Multi-SWE-RL: Training data for multilingual RL. <a href="https://arxiv.org/abs/2402.03004">arXiv</a></li>
+<li>SWE-Synth: Synthesizing verifiable bugfix datasets. <a href="https://arxiv.org/abs/2402.17791">arXiv</a></li>
+<li>SWE-Smith: Scaling data for software engineering agents. <a href="https://arxiv.org/abs/2401.15020">arXiv</a></li>
+<li>SWE-Fixer: Training open-source LLMs for automated bug fixing. <a href="https://arxiv.org/abs/2402.14114">arXiv</a></li>
+</ul>
+<!-- TRAINING_DATASETS_END -->
+
+<!-- METHOD_CATEGORIES_START -->
+<h3 id="training-free-methods_1">🧑‍💻 Training-free Methods<a class="headerlink" href="#training-free-methods_1" title="Permanent link">&para;</a></h3>
+<h4 id="single-agent">Single-Agent<a class="headerlink" href="#single-agent" title="Permanent link">&para;</a></h4>
+<ul>
+<li>SWE-Agent: Agent computer interfaces enable reliable evaluation of large language models on repository-level code changes. <a href="https://arxiv.org/abs/2309.07773">arXiv</a> <a href="https://github.com/swe-agent/swe-agent">GitHub</a></li>
+<li>PatchPilot: A cost-efficient software engineering agent.</li>
+<li>LCLM: Putting context in context: Simplifying agents with limited context.</li>
+<li>DGM: Darwin Godel machine: An open-ended developmental machine for software engineering.</li>
+<li>SE-Agent: Self-evolution trajectory optimization for large language model powered software engineering agents.</li>
+<li>Live-SWE-agent: The evolution of self-evolving agents for software engineering.</li>
+</ul>
+<h4 id="multi-agent">Multi-Agent<a class="headerlink" href="#multi-agent" title="Permanent link">&para;</a></h4>
+<ul>
+<li>MAGIS: An LLM-based multi-agent framework for automatic issue resolution.</li>
+<li>AutoCodeRover: Autonomous program improvement.</li>
+<li>CodeR: Issue resolving multi-agent framework for automated software engineering.</li>
+<li>OpenHands: An open platform for AI-native software engineering.</li>
+<li>OrcaLoca: Accurate issue localization and bug fixing in large codebases.</li>
+</ul>
+<h4 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Agentless, SynFix, CodeV, Seeing is Fixing.</li>
+</ul>
+<h3 id="training-based-methods_1">🧠 Training-based Methods<a class="headerlink" href="#training-based-methods_1" title="Permanent link">&para;</a></h3>
+<h4 id="sft-based-methods">SFT-based Methods<a class="headerlink" href="#sft-based-methods" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Lingma SWE-GPT • CodeXEmbed • SWE-Gym • SoRFT • SWE-Dev.</li>
+</ul>
+<h4 id="rl-based-methods">RL-based Methods<a class="headerlink" href="#rl-based-methods" title="Permanent link">&para;</a></h4>
+<ul>
+<li>SWE-RL • SEAlign • Satori-SWE • DeepSWE • DAPO.</li>
+</ul>
+<!-- METHOD_CATEGORIES_END -->
+
+<!-- EVAL_DATASETS_START -->
+<h3 id="evaluation-datasets_1">📊 Evaluation Datasets<a class="headerlink" href="#evaluation-datasets_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SWE-bench • SWE-bench Lite • SWE-bench-java • Visual SWE-bench</li>
+<li>SWE-Lancer • CodeRAG-bench • Multi-SWE-bench • SWE-PolyBench</li>
+<li>SWE-bench Multilingual • SWE-fficiency</li>
+</ul>
+<!-- EVAL_DATASETS_END -->
+
+<!-- DATA_COLLECTION_START -->
+<h3 id="data-construction">🏗️ Data Construction<a class="headerlink" href="#data-construction" title="Permanent link">&para;</a></h3>
+<h4 id="data-collection">Data Collection<a class="headerlink" href="#data-collection" title="Permanent link">&para;</a></h4>
+<ul>
+<li>SWE-rebench • SWE-bench Goes Live! • RepoForge</li>
+</ul>
+<h4 id="data-synthesis">Data Synthesis<a class="headerlink" href="#data-synthesis" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Learn-by-interact • R2E-Gym • SWE-Flow • SWE-Mirror</li>
+</ul>
+<!-- DATA_COLLECTION_END -->
+
+<!-- DATA_ANALYSIS_START -->
+<ul>
+<li>SWE-bench Verified: Verified LLM-generated fixes for SWE-Bench. <a href="https://arxiv.org/abs/2311.12983">arXiv</a></li>
+<li>SWE-Bench+: An enhanced coding benchmark. <a href="https://arxiv.org/abs/2311.08830">arXiv</a></li>
+<li>Patch Correctness: Are LLM-generated bug fixes correct? <a href="https://arxiv.org/abs/2401.05018">arXiv</a></li>
+<li>SPICE: Automated SWE-Bench labeling and analysis. <a href="https://arxiv.org/abs/2402.06610">arXiv</a></li>
+</ul>
+<!-- DATA_ANALYSIS_END -->
+
+<!-- METHODS_ANALYSIS_START -->
+<ul>
+<li>Context Retrieval: The importance of reasoning for context retrieval. <a href="https://arxiv.org/abs/2403.15616">arXiv</a></li>
+<li>The Danger of Overthinking: Examining reasoning and action in LLM software agents. <a href="https://arxiv.org/abs/2403.08700">arXiv</a></li>
+<li>Security Analysis: Analyzing security vulnerabilities in AI-generated fixes. <a href="https://arxiv.org/abs/2403.00001">arXiv</a></li>
+<li>SeaView: Software engineering agent evaluation. <a href="https://arxiv.org/abs/2402.00150">arXiv</a></li>
+</ul>
+<!-- METHODS_ANALYSIS_END -->
+
+<h3 id="data-construction_1">🏗️ Data Construction<a class="headerlink" href="#data-construction_1" title="Permanent link">&para;</a></h3>
+<p>Covers the tools and methods used to build and expand the datasets.</p>
+<ul>
+<li><strong>Data Collection</strong></li>
+</ul>
+<!-- DATA_COLLECTION_START -->
+<ul>
+<li>SWE-rebench: An automated pipeline for software engineering task replication. <a href="https://arxiv.org/abs/2403.11111">arXiv</a></li>
+<li>SWE-bench Goes Live!: Continuously collecting and evaluating real-world bugs. <a href="https://arxiv.org/abs/2403.12222">arXiv</a></li>
+<li>RepoForge: Training SOTA fast-thinking LLM agents for complex software tasks. <a href="https://arxiv.org/abs/2403.13333">arXiv</a></li>
+</ul>
+<!-- DATA_COLLECTION_END -->
+
+<ul>
+<li><strong>Data Synthesis</strong></li>
+</ul>
+<!-- DATA_SYNTHESIS_START -->
+<ul>
+<li>Learn-by-interact: Learning by interacting with the code execution environment. <a href="https://arxiv.org/abs/2404.01111">arXiv</a></li>
+<li>R2E-Gym: A procedural environment for hybrid reinforcement learning in software engineering. <a href="https://arxiv.org/abs/2404.02222">arXiv</a></li>
+<li>SWE-Flow: Synthesizing software engineering tasks for training agents. <a href="https://arxiv.org/abs/2404.03333">arXiv</a></li>
+<li>SWE-Mirror: Scaling issue-resolving datasets with agent collaboration. <a href="https://arxiv.org/abs/2404.04444">arXiv</a></li>
+</ul>
+<!-- DATA_SYNTHESIS_END -->
+
+<hr />
+<h2 id="analysis">🔍 Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h2>
+<p>This section includes research works that provide in-depth analysis and discussion of data, methods, and related phenomena in issue resolution.</p>
+<ul>
+<li><strong>Data Analysis</strong></li>
+</ul>
+<!-- DATA_ANALYSIS_START -->
+<ul>
+<li>SWE-bench Verified: Verified LLM-generated fixes for SWE-Bench. <a href="https://arxiv.org/abs/2402.01880">arXiv</a> <a href="https://github.com/princeton-nlp/SWE-bench">GitHub</a> <a href="https://huggingface.co/datasets/princeton-nlp/SWE-bench-verified">HuggingFace</a></li>
+<li>SWE-Bench+: An enhanced coding benchmark. <a href="https://arxiv.org/abs/2312.17294">arXiv</a> <a href="https://github.com/princeton-nlp/SWE-bench-plus">GitHub</a></li>
+<li>Patch Correctness: Are LLM-generated bug fixes correct? <a href="https://arxiv.org/abs/2306.11020">arXiv</a></li>
+<li>SPICE: Automated SWE-Bench labeling and analysis. <a href="https://arxiv.org/abs/2407.01489">arXiv</a></li>
+</ul>
+<!-- DATA_ANALYSIS_END -->
+
+<ul>
+<li><strong>Methods Analysis</strong></li>
+</ul>
+<!-- METHODS_ANALYSIS_START -->
+<ul>
+<li>Context Retrieval: The importance of reasoning for context retrieval. <a href="https://arxiv.org/abs/2403.00109">arXiv</a> <a href="https://github.com/context-retrieval/paper">GitHub</a></li>
+<li>The Danger of Overthinking: Examining reasoning and action in LLM software agents. <a href="https://arxiv.org/abs/2406.12345">arXiv</a></li>
+<li>Security Analysis: Analyzing security vulnerabilities in AI-generated fixes. <a href="https://arxiv.org/abs/2405.09876">arXiv</a></li>
+<li>SeaView: Software engineering agent evaluation. <a href="https://arxiv.org/abs/2404.09270">arXiv</a></li>
+</ul>
+<!-- METHODS_ANALYSIS_END -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="static/javascripts/link-chips.js"></script>
+      
+    
+  </body>
+</html>

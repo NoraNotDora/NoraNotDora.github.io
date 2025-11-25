@@ -1,0 +1,113 @@
+.air-hero {
+  background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 50%, #ec4899 100%);
+  background-size: 300% 300%;
+  animation: airHeroShift 24s ease infinite;
+  padding: 3.5rem 1.5rem 2.5rem;
+  margin: 0 0 2rem 0;
+  color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.air-hero, .air-hero * { color: inherit; }
+
+.hero-badges .hero-chip {
+  background-color: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+.hero-badges .hero-chip:hover {
+  background-color: rgba(255,255,255,0.22);
+}
+
+@keyframes airHeroShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.air-hero-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-media {
+  display: flex;
+  justify-content: center;
+}
+.hero-image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  margin: 0.75rem 0 1rem;
+}
+.air-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+.air-subtitle {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  opacity: 0.95;
+  color: #ffffff;
+}
+.md-typeset .air-title { color: #ffffff; }
+.md-typeset .air-subtitle { color: #ffffff; }
+.hero-badges {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.75rem;
+  background-color: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.hero-chip:hover {
+  background-color: rgba(255,255,255,0.18);
+  transform: translateY(-1px);
+}
+.hero-chip svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Link chips for paper links */
+.md-typeset a.link-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+.md-typeset a.link-chip svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  fill: currentColor;
+}
+.md-typeset a.link-chip.link-arxiv { background: #b31b1b; }
+.md-typeset a.link-chip.link-github { background: #24292f; }
+.md-typeset a.link-chip.link-hf { background: #ff7e21; }
+.md-typeset .paper-links { display: inline-flex; flex-wrap: wrap; gap: 0.35rem; }
+.md-typeset a.link-badge { display: inline-flex; align-items: center; }
+.md-typeset a.link-badge img { height: 20px; border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
